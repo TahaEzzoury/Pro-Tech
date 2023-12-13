@@ -5,7 +5,6 @@ from moviepy.editor import VideoClip, AudioClip
 # Paramètres de la vidéo
 duration = 10  # Durée en secondes
 fps = 24  # Images par seconde
-sample_rate = 44100  # Taux d'échantillonnage pour l'audio
 
 # Fonction à sonifier et à visualiser
 def f(x):
@@ -46,7 +45,7 @@ def make_sound(t):
 video = VideoClip(make_frame, duration=duration)
 
 # Création de la piste audio
-audio = AudioClip(make_sound, duration=duration, fps=sample_rate)
+audio = AudioClip(make_sound, duration=duration)
 video = video.set_audio(audio)
 
 # Sauvegarde de la vidéo
